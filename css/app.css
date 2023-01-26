@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&display=swap');
+
+h1 {
+  font-family: 'Merienda', cursive;
+  text-align: center;
+  font-size: 50px;
+
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Merienda', cursive;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --theme-background-color: rgb(63, 109, 46);
+  --theme-text-color: #030303;
+  --theme-header-color: #0b0b0b;
+  --theme-subheader-color: rgba(143, 246, 106, 0.29);
+  /* --theme-primary-color: #a92525; */
+  --theme-primary-highlight-color: rgba(204, 29, 117, 0.5);
+  --theme-action-color: rgba(97, 200, 60, 0.5);
+  /* --theme-dangerous-action-color: #af3f3f; */
+  --theme-input-base-color: rgba(144, 246, 106, 0.5);
+  --theme-input-submit-color: #a9cec2;
+  --theme-card-level-1-color: rgba(144, 246, 106, 0.5);
+  --theme-card-level-2-color: rgba(255, 121, 188, 0.5);
+  --theme-card-level-3-color: rgba(87, 210, 255, 0.565);
+  --theme-base-border-radius: 1rem;
+  /* --base-border: 4px;
+  --base-border-color: black; */
+}
+
+body {
+  background-color: var(--theme-background-color);
+  color: var(--theme-text-color);
+  /* margin: 0; */
+  padding-top: 0;
+  font-size: 14px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--theme-header-color);
+  height: 25px;
+  /* align-items: center; */
+
+}
+
+input {
+  background-color: var(--theme-input-base-color);
+  color: var(--theme-text-color);
+  padding: 0.5rem 1rem ; 
+  border: 3px solid black;
+  outline: none;
+  font-size: 1.3rem;
+ 
+}
+
+.span-todo ::placeholder {
+  color: black;
+}
+
+#todo-color {
+  width: 40px;
+}
+
+
+#todo-title {
+  width: 155px;
+  
+}
+
+#todo-text {
+  width: 155px;
+  
+}
+#todo-submit {
+  margin-right: 20px;
+}
+
+input[type="submit"] {
+  background-color: var(--theme-input-base-color);
+  color: black;
+  transition: all 1s;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: black;
+  background-color: var(--theme-input-submit-color);
+}
+
+input:focus {
+  background-color: var(--theme-input-base-color);
+  border: 3px solid black;
+  color: var(--theme-text-color);
+} 
+
+.fav-icon {
+  border-radius: 120px;
+  height: 120px;
+  width: 120px;
+margin-top: 20px;
+}
+
+img {
+  height: 40px;
+}
+
+#todo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem 2rem;
+  /* background-color: #1a1a1a; */
+  
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--base-border-radius);
+  padding: 1rem;
+  row-gap: 1rem;
+  transition: background-color 0, 5s ease;
+  position: relative;
+  border-radius: var(--theme-base-border-radius);
+  box-sizing: border-box;
+  border: 3px solid black;
+  outline: none;
+ 
+}
+
+.todo-item:hover {
+  background-color: var(--theme-primary-highlight-color);
+}
+
+.todo-item h2 {
+  font-size: 1.5em;
+}
+
+.todo-item p {
+  font-size: 1,3em;
+  margin-bottom: 2rem;
+}
+
+.todo-item span {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  font-size: 1,3em;
+}
+
+.todo-item section {
+
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1,3em;
+}
+
+section button {
+  background-color: transparent;
+  color: black;
+  font-size: 1.1rem;
+  border: none;
+ 
+}
+
+.todo-item .btn-remove-todo {
+  background: none;
+  border: none;
+  /* color: var(--theme-text-color); */
+  transition: all 1s;
+  padding: 0.5rem 1rem;
+  /* align-self: flex-end; */
+}
+
+.todo-item .btn-remove-todo img {
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+.todo-item .btn-remove-todo:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  filter: invert(100%);
+}
+
+.form-todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  /* background-color: var(--theme-subheader-color); */
+  border-radius: var(--base-border-radius);
+  margin: 1rem;
+  padding: 1rem;
+ 
+}
+
+.form-todo span {
+  display: flex;
+  gap: 1rem;
+ 
+}
+
+.todo-item p {
+    font-size: 1.3em;
+}
+
+.card-color-1 {
+  background-color: var(--theme-card-level-1-color);
+  
+}
+
+.card-color-2 {
+  background-color: var(--theme-card-level-2-color);
+}
+
+.card-color-3 {
+  background-color: var(--theme-card-level-3-color);
+}
+
+@media only screen and (max-width: 880px) {
+  .todo__date {
+    display: none;
+  }
+}
+
+.todo-checked {
+  background-color: var(--theme-input-base-color);
+}

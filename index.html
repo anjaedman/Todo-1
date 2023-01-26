@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/logga-ae.png" class="fav-icon">
+        <h1></h1>
+    </header>
+
+    <form class="form-todo" onsubmit="onFormSubmit(); return false;">
+        <span class="span-todo">
+            <input name="todo-title" id="todo-title" placeholder="Set a Title" />
+            <input name="todo-text" id="todo-text" value="" placeholder="Set a Text" />
+            <input name="todo-color" id="todo-color" value="1" placeholder="Set color" min="1" max="3" type="number"/>
+
+ <input type="submit" id="todo-submit"value=" + " />
+        </span>
+
+       
+    </form>
+
+<!-- 
+    <button onclick="logApp()">Log Appdata</button> -->
+
+    <div id="todo-container"> </div>
+
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
